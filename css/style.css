@@ -12,6 +12,17 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: #28282B;
+}
+
+p, figcaption, li {
+    font-family: "Roboto", sans-serif;
+    color: #F2F2F2;
+}
+
+h1, h2 {
+    font-family: "Righteous", sans-serif;
+    color: #F2F2F2;
 }
 
 
@@ -33,6 +44,15 @@ body {
     padding: 0;
 }
 
+.navbar ul li a  {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+.navbar ul li a:hover {
+    color: darkgray;
+}
+
 /* OVERVIEW STYLES */
 
 .overview-main{
@@ -52,6 +72,7 @@ figure {
 .overview-main figure img {
     width: 100%;
 }
+
 
 /* TYPES STYLES */
 
@@ -113,4 +134,9 @@ footer {
   gap: 1rem;
   font-size: 0.85rem;
   padding: 1rem;
+}
+
+footer img{
+    width: 140px;
+    height: auto;
 }
