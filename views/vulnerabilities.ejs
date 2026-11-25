@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cybersecurity Vulnerabilities</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/">Overview</a></li>
+          <li><a href="/types">Types</a></li>
+          <li><a href="/spread">How They Spread</a></li>
+          <li><a href="/prevention">Prevention</a></li>
+          <li><a href="/vulnerabilities">Vulnerabilities</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="vulnerability-main">
+      <h1>Known Cybersecurity Vulnerabilities</h1>
+
+      <p>
+        These vulnerabilities come from CISA's Known Exploited Vulnerabilities
+        catalog.
+      </p>
+
+      <p>Catalog date: <%= catalogDate %></p>
+
+      <% vulnerabilities.forEach((item) => { %>
+        <article class="vulnerability-card">
+          <h2><%= item.vulnerabilityName %></h2>
+
+          <p><strong>CVE:</strong> <%= item.cveID %></p>
+          <p><strong>Vendor:</strong> <%= item.vendorProject %></p>
+          <p><strong>Product:</strong> <%= item.product %></p>
+          <p><%= item.shortDescription %></p>
+          <p>
+            <strong>Recommended action:</strong>
+            <%= item.requiredAction %>
+          </p>
+        </article>
+      <% }); %>
+    </main>
+
+    <footer>
+      <img src="/img/CSUMBLOGO.jpg" alt="CSUMB logo">
+      <p>Made with love ♥. Claudio Bardales 2026</p>
+    </footer>
+  </body>
+</html>

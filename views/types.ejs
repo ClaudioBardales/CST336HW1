@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <%- include("partials/head.ejs") %>
+
+  <body>
+    <%- include("partials/nav.ejs") %>
+
+    <main class="type-main">
+      <h1>Types of Computer Threats</h1>
+
+      <section class="topic-grid">
+        <article>
+          <h2>Virus</h2>
+          <p>
+            A virus attaches itself to a file and spreads when someone opens
+            that file.
+          </p>
+        </article>
+
+        <article>
+          <h2>Worm</h2>
+          <p>
+            A worm can copy itself across networks without needing a host file.
+          </p>
+        </article>
+
+        <article>
+          <h2>Trojan Horse</h2>
+          <p>
+            A Trojan pretends to be a safe program but performs harmful
+            actions after it is opened.
+          </p>
+        </article>
+      </section>
+
+      <figure>
+        <img src="/img/types.jpg" alt="Types of computer threats">
+      </figure>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <%- include("partials/head.ejs") %>
+
+  <body>
+    <%- include("partials/nav.ejs") %>
+
+    <main class="alert-main">
+      <h1>Security Alert</h1>
+
+      <article class="alert-card">
+        <h2><%= alert.title %></h2>
+
+        <p>
+          <strong>Severity:</strong>
+          <%= alert.severity %>
+        </p>
+
+        <p>
+          <strong>Source IP:</strong>
+          <%= alert.source %>
+        </p>
+
+        <p><%= alert.description %></p>
+      </article>
+    </main>
+
+    <%- include("partials/footer.ejs") %>
+  </body>
+</html>
